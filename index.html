@@ -6,50 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Основа плеера</title>
         <link href="./src/style.css" rel="stylesheet" type="text/css">
+        <script src="./src/index.js"></script>
     </head>
     <body>
-        <div class="player">
-            <div class="timeline">
-                <div class="timeline-chunk timeline-chunk-active">
-                    <div class="timeline-chunk-inner"></div>
-                </div>
+        <div class="my-player">
 
-                <div class="timeline-chunk">
-                    <div class="timeline-chunk-inner"></div>
-                </div>
-
-                <div class="timeline-chunk">
-                    <div class="timeline-chunk-inner"></div>
-                </div>
-
-                <div class="timeline-chunk">
-                    <div class="timeline-chunk-inner"></div>
-                </div>
-            </div>
-            <div class="player-content-wrapper">
-                <div class="player-chunk-switcher player-chunk-prev"></div>
-                <div class="player-chunk-switcher player-chunk-next"></div>
-
-                <div class="player-content">
-                    <div class="player-chunk player-chunk-active">
-                        <img src="./src/images/img1.jpeg" alt="Каппадокия">
-                    </div>
-
-                    <div class="player-chunk">
-                        <img src="./src/images/img2.jpeg" alt="Мальдивы">
-                    </div>
-
-                    <div class="player-chunk">
-                        <img src="./src/images/img3.jpeg" alt="Париж">
-                    </div>
-
-                    <div class="player-chunk">
-                        <img src="./src/images/img4.jpeg" alt="Италия">
-                    </div>
-                </div>
-            </div>
         </div>
-        
-        <script src="./src/index.js"></script>
+        <script>
+            initPlayer({
+                target: '.my-player',
+                slides: [
+                    {url: './src/images/img1.jpeg', alt: 'slide1'},
+                    {url: './src/images/img2.jpeg', alt: 'slide2'},
+                    {url: './src/images/img3.jpeg', alt: 'slide3'},
+                    {url: './src/images/img4.jpeg', alt: 'slide4'},
+                ],
+
+                delayPerSlide: 5
+            });
+        </script>
     </body>
 </html>
